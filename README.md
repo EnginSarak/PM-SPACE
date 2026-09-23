@@ -247,6 +247,8 @@ The last check before goods leave the building, reachable through the **Control 
 | Phone / tablet | The inspection: job list, count sheet, calculator, sound, archive |
 | PC | The drop-off: add XML documents and start scanning |
 
+Delivery notes reach the PC page two ways: the button opens the file picker, or a multi-selection is dragged out of Explorer or Finder and dropped on the page, where the button arms itself as the files come over the window. Folders and anything that is not XML are filtered out before a file is read.
+
 While an inspection is running, the PC page greys out and shows only a counter, so a stray click cannot interrupt a run in progress. A log on the PC page shows recent scans, documents and filed inspections, which is what you look at when a scan does not seem to have arrived.
 
 
