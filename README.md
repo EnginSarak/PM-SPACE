@@ -5,7 +5,7 @@
 
 # PROMEDIA SPACE
 
-**Version 1.0.0**
+**Version 1.1.0**
 
 *An internal web tool for monitoring warehouse utilization, staging capacity, inbound and outbound logistics,<br/>and a Control Center for final inspections*
 
@@ -43,6 +43,7 @@
   - [Maintenance Panel](#maintenance-panel)
   - [Theming](#theming)
 - [Access Control](#access-control)
+- [Changelog](#changelog)
 
 ---
 
@@ -240,6 +241,8 @@ The last check before goods leave the building, reachable through the **Control 
 
 **Filed inspections tick their rows.** Both sides carry the same order number, so filing an inspection automatically marks the matching outbound rows as printed, picked and controlled. Where a number would match two rows, or none, the Control Center asks instead of guessing. If the customer was not in the table yet at inspection time, the rows can still be assigned afterwards from the archive, and unassigning gives back exactly the ticks that inspection had set.
 
+**Shipping details on every note.** Next to the customer name on each card, and in the header of an open inspection, sits a small info icon. It opens a sheet with what the delivery note says about the shipment: number of packages with their unit, net and gross weight, the destination and the customer. Destination and customer are kept apart, since the goods do not always go to the party that ordered them. Pallets and cartons (`CT`) are counted separately and never added together. On a group the sheet sums all notes per unit and lists each note below.
+
 **One address, two screens.** The same button opens different things depending on the device:
 
 | Device | What opens |
@@ -360,6 +363,19 @@ PROMEDIA SPACE uses a token-based access model. There are no user accounts, pass
 Once a valid token is entered on the login screen it is stored in the browser and validated automatically on later visits.
 
 Access tokens are credentials. They should never be committed to version control or shared outside authorized channels.
+
+---
+
+## Changelog
+
+### 1.1.0
+
+- Control Center: info icon on every delivery note and group, showing packages and unit, net and gross weight, destination and customer from the XML.
+- Pallets and cartons are summed separately on grouped notes.
+
+### 1.0.0
+
+- Initial release.
 
 ---
 
