@@ -5,7 +5,7 @@
 
 # PROMEDIA SPACE
 
-**Version 1.1.0**
+**Version 1.3.0**
 
 *An internal web tool for monitoring warehouse utilization, staging capacity, inbound and outbound logistics,<br/>and a Control Center for final inspections*
 
@@ -131,7 +131,7 @@ Each occupied pallet slot is an interactive tile containing:
 - **Customer abbreviation**: a short label identifying the customer
 - **Pallet index**: shows which pallet this is out of the customer's total, for example `2/5` means the second of five pallets belonging to that order
 - **Country-coded background**: a fixed dark color per destination country (IT, DE, FR, PL, ES, BE, DK, SE, LT, CH, QA, NL, AT, UK, and more)
-- **Shipment-coded border**: a color per shipment. Orders that leave on the same truck share one border color, while separate shipments of the same customer get distinct colors so they read as separate on the floor, see [Shipment Grouping](#shipment-grouping)
+- **Shipment-coded border**: a color per shipment. Orders that leave on the same truck share one border color, and every shipment on the floor, including separate shipments of the same customer, gets a color that stays clearly distinct from all others. Colors only change when a new shipment would otherwise be hard to tell apart, see [Shipment Grouping](#shipment-grouping)
 - **Status corner markers**: small symbols in the top-right corner showing progress
 
 | Symbol | Status |
@@ -306,7 +306,7 @@ The Maintenance Panel is open to **Maintainer** and **Customer Service** roles. 
 - Fully editable table with inline editing for all order fields: customer, date, picks, SORD number, country, forwarder, colli, notes
 - Checkbox columns for Printed, Picked, Controlled, Ordered, Confirmed and Picked Up, saved immediately
 - A **Pickup ETA** column showing each order's expected departure, color-coded green when confirmed and orange while estimated, see [Pickup ETA & Pick Order](#pickup-eta--pick-order)
-- **String bridges** down the left edge connecting the rows that ship together, in the customer's color, see [Shipment Grouping](#shipment-grouping)
+- **String bridges** down the left edge connecting the rows that ship together, in the shipment's color, see [Shipment Grouping](#shipment-grouping)
 - Set or remove **ASAP** on a delivery date, and detach or reattach an order from its shipment group, by right-click or long-press
 - **Autosave**: text changes are saved a moment after the last keystroke, and rows that are still missing a customer or a date are held back until they are complete. A **Save Changes** button is there for saving on demand
 - **Add Row** to create a blank order, or just press `N`. Pressing `Enter` on the dashboard opens the outbound table
@@ -367,6 +367,14 @@ Access tokens are credentials. They should never be committed to version control
 ---
 
 ## Changelog
+
+### 1.3.0
+
+- Shipment colors reworked: every shipment on the floor now gets a clearly distinct color.
+
+### 1.2.0
+
+- Redesigned dark mode.
 
 ### 1.1.0
 
