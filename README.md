@@ -5,7 +5,7 @@
 
 # PROMEDIA SPACE
 
-**Version 1.3.0**
+**Version 1.3.2**
 
 *An internal web tool for monitoring warehouse utilization, staging capacity, inbound and outbound logistics,<br/>and a Control Center for final inspections*
 
@@ -367,6 +367,17 @@ Access tokens are credentials. They should never be committed to version control
 ---
 
 ## Changelog
+
+### 1.3.2
+
+- Floor plan opens in 3D by default. Switching to 2D is remembered per browser.
+- 3D floor plan: clicking a pallet opens the same detail card as the 2D view.
+- 3D floor plan: the hall sits slightly higher in the frame.
+- Outbound sidebar uses the same table icon as the Outbound Overview button.
+
+### 1.3.1
+
+- Bin Usage: "Today" now stays on screen for a full 24 hours from when it was logged, not just until midnight, and a fresh entry replaces it right away.
 
 ### 1.3.0
 
