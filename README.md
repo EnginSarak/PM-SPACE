@@ -1,7 +1,10 @@
 <div align="center">
 
-<img src="public/Logo_Light_Mode.svg#gh-light-mode-only" alt="Promedia Space" height="60"/>
-<img src="public/Logo_Dark_Mode.svg#gh-dark-mode-only" alt="Promedia Space" height="60"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="public/Logo_Dark_Mode.svg"/>
+  <source media="(prefers-color-scheme: light)" srcset="public/Logo_Light_Mode.svg"/>
+  <img src="public/Logo_Light_Mode.svg" alt="Promedia Space" height="60"/>
+</picture>
 
 # PROMEDIA SPACE
 
