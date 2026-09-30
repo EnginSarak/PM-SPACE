@@ -208,7 +208,7 @@ The Bin Usage Sidebar shows a utilization bar color-coded by fill level, today's
 
 The Forecast button in the Floor Plan header opens a date picker for previewing the projected warehouse state on any future date. The floor map and capacity bar switch over and show:
 
-- Inbound deliveries expected to have arrived by that date
+- Inbound deliveries on their expected arrival day. The day after, they count as stored and are gone from the floor
 - Outbound orders still likely to be standing, based on when they are expected to leave. An order leaving on the 16th still occupies its slot for all of the 16th and only drops out of the forecast on the 17th
 
 A banner makes clear this is a projection and not live data, with a "Back to Live" link to exit. The arrow buttons on either side of the Forecast button step through days without reopening the calendar.
