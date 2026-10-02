@@ -8,7 +8,7 @@
 
 # PROMEDIA SPACE
 
-**Version 1.1.0**
+**Version 1.1.1**
 
 *An internal web tool for monitoring warehouse utilization, staging capacity, inbound and outbound logistics,<br/>and a Control Center for final inspections*
 
@@ -418,6 +418,10 @@ Access tokens are credentials. They should never be committed to version control
 ---
 
 ## Changelog
+
+### 1.1.1
+
+- Priority levels are no longer capped at 3 — any number can be assigned.
 
 ### 1.1.0
 
