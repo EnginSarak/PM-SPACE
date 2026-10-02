@@ -14,6 +14,7 @@
 
 *Built by [Engin Sarak](https://github.com/EnginSarak)*
 
+![Version](https://img.shields.io/badge/version-1.1.1-blue)
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.110-009688?logo=fastapi&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?logo=mongodb&logoColor=white)
@@ -421,7 +422,7 @@ Access tokens are credentials. They should never be committed to version control
 
 ### 1.1.1
 
-- Priority levels are no longer capped at 3 — any number can be assigned.
+- Priority levels are no longer capped at 3, any number can be assigned.
 
 ### 1.1.0
 
