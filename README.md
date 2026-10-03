@@ -8,13 +8,13 @@
 
 # PROMEDIA SPACE
 
-**Version 1.1.2**
+**Version 1.1.3**
 
 *An internal web tool for monitoring warehouse utilization, staging capacity, inbound and outbound logistics,<br/>and a Control Center for final inspections*
 
 *Built by [Engin Sarak](https://github.com/EnginSarak)*
 
-![Version](https://img.shields.io/badge/version-1.1.2-blue)
+![Version](https://img.shields.io/badge/version-1.1.3-blue)
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.110-009688?logo=fastapi&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?logo=mongodb&logoColor=white)
@@ -419,6 +419,11 @@ Access tokens are credentials. They should never be committed to version control
 ---
 
 ## Changelog
+
+### 1.1.3
+
+- Outbound rows with a filed Control Center inspection now show an ⓘ next to the customer name in the order popup, the groupage popup and the extended outbound view. It opens the shipment info from the delivery notes: pallets, net and gross weight, every delivery note, destination and customer address.
+- Every value in the shipment info is copied to the clipboard with a click.
 
 ### 1.1.2
 
