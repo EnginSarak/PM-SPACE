@@ -10,7 +10,7 @@
 
 **Version 1.1.5**
 
-*An internal web tool for monitoring warehouse utilization, staging capacity, inbound and outbound logistics,<br/>with a integrated Control Center for final inspections*
+*An internal web tool for monitoring warehouse utilization, staging capacity, inbound and outbound logistics<br/>and a integrated Control Center for final inspections*
 
 *Built by [Engin Sarak](https://github.com/EnginSarak)*
 
