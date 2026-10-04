@@ -78,7 +78,7 @@ What each person sees depends on their role, see [Access Control](#access-contro
 ## Preview
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/enginsarak/space/main/public/preview.png?v=2" alt="Promedia Space Dashboard Preview" width="100%"/>
+  <img src="public/preview.png" alt="Promedia Space Dashboard Preview" width="100%"/>
 </div>
 
 ---
