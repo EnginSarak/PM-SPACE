@@ -8,13 +8,13 @@
 
 # PROMEDIA SPACE
 
-**Version 1.2.2**
+**Version 1.3.0**
 
 *An internal web tool for monitoring warehouse utilization, staging capacity, inbound and outbound logistics<br/>and a integrated Control Center for final inspections*
 
 *Built by [Engin Sarak](https://github.com/EnginSarak)*
 
-![Version](https://img.shields.io/badge/version-1.2.2-blue)
+![Version](https://img.shields.io/badge/version-1.3.0-blue)
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.110-009688?logo=fastapi&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?logo=mongodb&logoColor=white)
@@ -603,6 +603,10 @@ PROMEDIA SPACE uses a token-based access model. There are no user accounts, pass
 ---
 
 ## Changelog
+
+### 1.3.0
+
+- New customer colors. The first ten customers on the floor get ten clearly different hues (blue, orange, magenta, gold, violet, red, sky blue, lime, jade and brown), with only one pink among them. Lighter and darker shades are only used when more customers are on the floor, and they never stand next to each other.
 
 ### 1.2.2
 
