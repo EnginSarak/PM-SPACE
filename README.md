@@ -8,13 +8,13 @@
 
 # PROMEDIA SPACE
 
-**Version 1.4.1**
+**Version 1.4.2**
 
 *An internal web tool for monitoring warehouse utilization, staging capacity, inbound and outbound logistics<br/>and a integrated Control Center for final inspections*
 
 *Built by [Engin Sarak](https://github.com/EnginSarak)*
 
-![Version](https://img.shields.io/badge/version-1.4.1-blue)
+![Version](https://img.shields.io/badge/version-1.4.2-blue)
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.110-009688?logo=fastapi&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?logo=mongodb&logoColor=white)
@@ -603,6 +603,10 @@ PROMEDIA SPACE uses a token-based access model. There are no user accounts, pass
 ---
 
 ## Changelog
+
+### 1.4.2
+
+- A row in the outbound overview that stays incomplete for 15 minutes is cleaned up automatically. A new row is discarded, and unfinished changes to an existing order are reverted to its last saved state, so the order itself never disappears. Every edit restarts the 15 minutes, a row you are working in is never touched, and orders nobody has edited are left alone. A short notice says what was cleaned up, and a discarded new row can be brought back with Undo.
 
 ### 1.4.1
 
