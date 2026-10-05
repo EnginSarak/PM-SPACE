@@ -8,13 +8,13 @@
 
 # PROMEDIA SPACE
 
-**Version 1.4.0**
+**Version 1.4.1**
 
 *An internal web tool for monitoring warehouse utilization, staging capacity, inbound and outbound logistics<br/>and a integrated Control Center for final inspections*
 
 *Built by [Engin Sarak](https://github.com/EnginSarak)*
 
-![Version](https://img.shields.io/badge/version-1.4.0-blue)
+![Version](https://img.shields.io/badge/version-1.4.1-blue)
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.110-009688?logo=fastapi&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?logo=mongodb&logoColor=white)
@@ -603,6 +603,10 @@ PROMEDIA SPACE uses a token-based access model. There are no user accounts, pass
 ---
 
 ## Changelog
+
+### 1.4.1
+
+- Labeling problems is now limited by role. Admins (Maintainer) can label outbounds and inbounds and move them to the Issues Center. Warehouse Operators can do the same for inbounds only. All other roles see the problem badge and its description but cannot label, change, clear or move anything. The server enforces this as well.
 
 ### 1.4.0
 
