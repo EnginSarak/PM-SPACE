@@ -8,13 +8,13 @@
 
 # PROMEDIA SPACE
 
-**Version 1.1.12**
+**Version 1.2.0**
 
 *An internal web tool for monitoring warehouse utilization, staging capacity, inbound and outbound logistics<br/>and a integrated Control Center for final inspections*
 
 *Built by [Engin Sarak](https://github.com/EnginSarak)*
 
-![Version](https://img.shields.io/badge/version-1.1.12-blue)
+![Version](https://img.shields.io/badge/version-1.2.0-blue)
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.110-009688?logo=fastapi&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?logo=mongodb&logoColor=white)
@@ -603,6 +603,10 @@ PROMEDIA SPACE uses a token-based access model. There are no user accounts, pass
 ---
 
 ## Changelog
+
+### 1.2.0
+
+- The outbound overview in Maintenance now checks every new or changed row before you leave it: Colli must be a fixed number with PAL or BOX (for example 12 PAL or 1 BOX), Forwarder must be filled in, and either Delivered by or Pickup date must be set. While you are filling in rows nothing interrupts you. Only when you save, close Maintenance or switch tabs does a short notice list what is still missing, and the affected fields are marked until they are fixed.
 
 ### 1.1.12
 
