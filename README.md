@@ -610,13 +610,12 @@ PROMEDIA SPACE uses a token-based access model. There are no user accounts, pass
 
 ### 1.4.0
 
-- Inbounds can now be marked as a problem, just like outbounds: right click the status, or long press on touch devices. The problem box offers Discrepancy (orange), Not arrived (violet) or a free reason, and a free text field is always available. A discrepancy can carry an optional pallet difference, for example -2.
-- Only arrived inbounds can be marked as a problem. An inbound that already has a problem label can still be changed or cleared.
-- An inbound marked as Not arrived no longer appears on the floor plan and does not count anywhere. For a discrepancy, the floor shows the delivered number of pallets, that is the expected pallets plus the difference.
-- An inbound dated today now counts as arrived from 7:00 hall time. Before that it shows as expected. The switch happens on its own while the page is open.
-- Problem outbounds and inbounds can be moved to the Issues Center with one click, where photos and more details can be added. The case opens directly from the notice, and its card shows whether it is an outbound or an inbound together with the problem type. Customer and supplier names in these cases always follow the current name.
-- Inbounds marked as stored are now kept in a history for 365 days, including any problem, with CSV export. Maintenance can restore or delete history entries.
-- Problem badges in the inbound list are right-aligned, and pallet counts line up underneath each other.
+- New: inbounds can be labeled as a problem, just like outbounds (right click on the status, long press on touch devices). Choose Discrepancy (orange), Not arrived (violet) or Other, always with a free text field. A discrepancy can carry an optional pallet difference such as -2. Only arrived inbounds can be labeled, and the inbound list shows the badges right-aligned.
+- Not arrived inbounds leave the floor plan and no longer count. For a discrepancy the floor shows the pallets that were actually delivered. An inbound dated today counts as arrived from 7:00.
+- Problem outbounds and inbounds move to the Issues Center with one click, where photos and details can be added. Names in these cases always follow the current customer or supplier name.
+- New arrangement of the 3D warehouse view: customers stay together in a block, pallets fill each block without gaps, and similar colors never stand next to each other.
+- Stored inbounds are kept in a history for 365 days, with CSV export.
+- Bug fixes.
 
 ### 1.3.1
 
