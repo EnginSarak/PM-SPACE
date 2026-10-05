@@ -8,13 +8,13 @@
 
 # PROMEDIA SPACE
 
-**Version 1.2.0**
+**Version 1.2.1**
 
 *An internal web tool for monitoring warehouse utilization, staging capacity, inbound and outbound logistics<br/>and a integrated Control Center for final inspections*
 
 *Built by [Engin Sarak](https://github.com/EnginSarak)*
 
-![Version](https://img.shields.io/badge/version-1.2.0-blue)
+![Version](https://img.shields.io/badge/version-1.2.1-blue)
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.110-009688?logo=fastapi&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?logo=mongodb&logoColor=white)
@@ -603,6 +603,11 @@ PROMEDIA SPACE uses a token-based access model. There are no user accounts, pass
 ---
 
 ## Changelog
+
+### 1.2.1
+
+- An invalid Colli value such as 4-5 PAL can no longer be saved, even when a correct value was entered first and changed afterwards. Confirming the pallet count when ticking Picked now sets Colli to that exact number, and the server rejects any Colli change that is not a whole number with PAL or BOX.
+- Every row you change in the outbound overview, including ticking a checkbox, must be complete before you can leave Maintenance.
 
 ### 1.2.0
 
