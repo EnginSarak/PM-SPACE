@@ -8,13 +8,13 @@
 
 # PROMEDIA SPACE
 
-**Version 1.2.0**
+**Version 1.2.1**
 
 *An internal web tool for monitoring warehouse utilization, staging capacity, inbound and outbound logistics<br/>and a integrated Control Center for final inspections*
 
 *Built by [Engin Sarak](https://github.com/EnginSarak)*
 
-![Version](https://img.shields.io/badge/version-1.2.0-blue)
+![Version](https://img.shields.io/badge/version-1.2.1-blue)
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.110-009688?logo=fastapi&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?logo=mongodb&logoColor=white)
@@ -267,7 +267,7 @@ All orders of a groupage share one priority. Once an order is set to **Ordered**
 
 ### Problem Flags
 
-Maintainers right-click an order's status badge, choose **PROBLEM** and enter a reason. The row turns grey, the badge turns red and the reason appears at the top of the order card. **Clear problem** in the same menu removes it. The flag does not change the pick order.
+Maintainers right-click an order's status badge, choose **PROBLEM** and enter a reason. The row turns grey, the badge turns red and the reason appears at the top of the order card. **Clear problem** in the same menu removes it. The flag does not change the pick order. **Move to Issues Center** turns the problem into a case in the [Issues Center](#issues-center); after that the menu reads **Open in Issues Center**.
 
 <p align="center">
   <img src="public/screenshots/problem-menu.webp" alt="Problem menu on the status badge" width="48%"/>
@@ -314,10 +314,28 @@ A linked order shows the yellow triangle until its task is done.
   <img src="public/screenshots/inbound.webp" alt="Inbound list" width="100%"/>
 </p>
 
-**Inbound** lists known deliveries: **EXPECTED** with a date, or **ARRIVED** once they occupy slots. On the arrival day they already get their slots from the morning on. Right-click (long-press) and **Mark as Stored** removes a delivery once it has been put away.
+**Inbound** lists known deliveries: **EXPECTED** with a date, or **ARRIVED** once they occupy slots. On the arrival day they already get their slots from the morning on. Right-click (long-press) and **Mark as Stored** removes a delivery once it has been put away and moves it to the history.
 
 <p align="center">
   <img src="public/screenshots/stored-menu.webp" alt="Mark as Stored menu" width="60%"/>
+</p>
+
+The clock icon in the full Inbound list opens the **History**: every delivery stored in the last 365 days, with any problem it had, and **Export CSV**.
+
+<p align="center">
+  <img src="public/screenshots/inbound-history.webp" alt="History of stored deliveries" width="100%"/>
+</p>
+
+**Inbound problems.** An arrived delivery can be flagged like an order: right-click (long-press) its status badge, choose **PROBLEM** and pick the type. **Discrepancy** takes an optional pallet difference such as −2, and the floor then shows only the pallets that are really there. **Not arrived** takes the delivery off the floor. **Other** keeps it as it is and needs a note. Maintainers and Warehouse Operators flag deliveries; everyone else sees the badge and the details in the delivery card. A flagged delivery offers **Edit problem**, **Move to Issues Center** and **Clear problem**.
+
+<p align="center">
+  <img src="public/screenshots/inbound-problem-menu.webp" alt="Problem menu on an arrived delivery" width="60%"/>
+  <img src="public/screenshots/inbound-problem-dialog.webp" alt="Discrepancy with two missing pallets" width="36%"/>
+</p>
+
+<p align="center">
+  <img src="public/screenshots/inbound-problem.webp" alt="Inbound list with a discrepancy and a delivery that did not arrive" width="60%"/>
+  <img src="public/screenshots/inbound-problem-card.webp" alt="Delivery card with the problem" width="36%"/>
 </p>
 
 <p align="center">
@@ -338,7 +356,7 @@ A linked order shows the yellow triangle until its task is done.
 
 #### Outbound orders
 
-**Add Row** (or `N`) adds an order. Rows save themselves as soon as they have a customer and a delivery date; incomplete rows wait so half-typed orders never reach the dashboard. **Undo** reverts up to ten steps, including a delete.
+**Add Row** (or `N`) adds an order. Rows save themselves as soon as they have all required fields: **Customer**, **Forwarder**, **Colli** and **Delivered by** or a pickup date. Incomplete rows wait so half-typed orders never reach the dashboard. **Undo** reverts up to ten steps, including a delete.
 
 <p align="center">
   <img src="public/screenshots/new-row.webp" alt="A new order row" width="100%"/>
@@ -356,7 +374,7 @@ A linked order shows the yellow triangle until its task is done.
 | **Country** | Two-letter destination code, with suggestions |
 | **Delivered by** | Requested delivery date, or ASAP |
 | **Forwarder** | Forwarder |
-| **Colli** | Number plus `PAL` or `BOX`. Only PAL orders take slots on the floor |
+| **Colli** | A whole number plus `PAL` or `BOX`. Ranges like `3-5 PAL` are not accepted. Only PAL orders take slots on the floor |
 | **Notes** | Anything the warehouse should know |
 
 The checkboxes follow the order's path and save instantly:
@@ -369,6 +387,16 @@ The checkboxes follow the order's path and save instantly:
 | **Ordered** | Forwarder booked, the priority is released |
 | **Confirmed** | Pickup confirmed. Asks for a pickup date if there is none |
 | **Picked Up** | Goods gone, the row moves to History |
+
+**Save Changes** or closing the panel with an incomplete row stops at **Not quite finished**: it lists the missing fields per row, marks those cells red, and **OK** jumps to the first one. A row left incomplete for 15 minutes is cleaned up: a new row is discarded (**Undo** brings it back), an unfinished change to an existing order is reset.
+
+<p align="center">
+  <img src="public/screenshots/required-alert.webp" alt="Not quite finished" width="30%"/>
+</p>
+
+<p align="center">
+  <img src="public/screenshots/required-fields.webp" alt="Missing required fields marked in red" width="100%"/>
+</p>
 
 <p align="center">
   <img src="public/screenshots/pallet-confirm.webp" alt="Pallet count check on Picked" width="48%"/>
@@ -412,6 +440,8 @@ Supplier, pallet count and expected date, then **Add**. Today or earlier counts 
 <p align="center">
   <img src="public/screenshots/maintenance-inbound.webp" alt="Inbound tab" width="90%"/>
 </p>
+
+**History** in this tab lists the stored deliveries of the last 365 days. Maintainers bring one back with the blue arrow or delete it.
 
 #### Config
 
@@ -463,7 +493,7 @@ Unresolved problems and complaints with photos, visible to everyone so they don'
   <img src="public/screenshots/issues.webp" alt="Issues Center" width="100%"/>
 </p>
 
-A case has a title, formatted text and up to 20 photos, compressed in the browser before upload. There is no "done" button: a solved case is deleted. Cases older than two years are removed automatically.
+A case has a title, formatted text and up to 20 photos, compressed in the browser before upload. There is no "done" button: a solved case is deleted. Cases older than two years are removed automatically. Orders and deliveries flagged as a problem come in with one click through **Move to Issues Center**, with all details of the problem.
 
 <p align="center">
   <img src="public/screenshots/issues-editor.webp" alt="New case editor" width="48%"/>
@@ -603,6 +633,10 @@ PROMEDIA SPACE uses a token-based access model. There are no user accounts, pass
 ---
 
 ## Changelog
+
+### 1.2.1
+
+- In the 3D view, the outbound and inbound lists show a plain color square without an outline next to each customer and supplier.
 
 ### 1.2.0
 
