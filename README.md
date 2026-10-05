@@ -8,13 +8,13 @@
 
 # PROMEDIA SPACE
 
-**Version 1.1.11**
+**Version 1.1.12**
 
 *An internal web tool for monitoring warehouse utilization, staging capacity, inbound and outbound logistics<br/>and a integrated Control Center for final inspections*
 
 *Built by [Engin Sarak](https://github.com/EnginSarak)*
 
-![Version](https://img.shields.io/badge/version-1.1.11-blue)
+![Version](https://img.shields.io/badge/version-1.1.12-blue)
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.110-009688?logo=fastapi&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?logo=mongodb&logoColor=white)
@@ -603,6 +603,10 @@ PROMEDIA SPACE uses a token-based access model. There are no user accounts, pass
 ---
 
 ## Changelog
+
+### 1.1.12
+
+- The 3D floor plan tries many more arrangements before it accepts a free slot inside a block.
 
 ### 1.1.11
 
