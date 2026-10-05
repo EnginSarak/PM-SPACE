@@ -8,13 +8,13 @@
 
 # PROMEDIA SPACE
 
-**Version 1.2.1**
+**Version 1.2.2**
 
 *An internal web tool for monitoring warehouse utilization, staging capacity, inbound and outbound logistics<br/>and a integrated Control Center for final inspections*
 
 *Built by [Engin Sarak](https://github.com/EnginSarak)*
 
-![Version](https://img.shields.io/badge/version-1.2.1-blue)
+![Version](https://img.shields.io/badge/version-1.2.2-blue)
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.110-009688?logo=fastapi&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?logo=mongodb&logoColor=white)
@@ -603,6 +603,11 @@ PROMEDIA SPACE uses a token-based access model. There are no user accounts, pass
 ---
 
 ## Changelog
+
+### 1.2.2
+
+- Marking a customer as picked up now takes effect immediately. The row slides out of the outbound list and its pallets leave the floor plan right away while saving continues in the background. If saving fails, the row comes back and a notice says it was not marked as picked up.
+- All orders of a customer are now saved in a single request instead of one after another, so the pickup reaches the server noticeably faster.
 
 ### 1.2.1
 
