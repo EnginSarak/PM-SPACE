@@ -8,13 +8,13 @@
 
 # PROMEDIA SPACE
 
-**Version 1.4.2**
+**Version 1.2.0**
 
 *An internal web tool for monitoring warehouse utilization, staging capacity, inbound and outbound logistics<br/>and a integrated Control Center for final inspections*
 
 *Built by [Engin Sarak](https://github.com/EnginSarak)*
 
-![Version](https://img.shields.io/badge/version-1.4.2-blue)
+![Version](https://img.shields.io/badge/version-1.2.0-blue)
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.110-009688?logo=fastapi&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?logo=mongodb&logoColor=white)
@@ -604,73 +604,14 @@ PROMEDIA SPACE uses a token-based access model. There are no user accounts, pass
 
 ## Changelog
 
-### 1.4.2
-
-- A row in the outbound overview that stays incomplete for 15 minutes is cleaned up automatically. A new row is discarded, and unfinished changes to an existing order are reverted to its last saved state, so the order itself never disappears. Every edit restarts the 15 minutes, a row you are working in is never touched, and orders nobody has edited are left alone. A short notice says what was cleaned up, and a discarded new row can be brought back with Undo.
-
-### 1.4.1
-
-- Labeling problems is now limited by role. Admins (Maintainer) can label outbounds and inbounds and move them to the Issues Center. Warehouse Operators can do the same for inbounds only. All other roles see the problem badge and its description but cannot label, change, clear or move anything. The server enforces this as well.
-
-### 1.4.0
-
-- New: inbounds can be labeled as a problem, just like outbounds (right click on the status, long press on touch devices). Choose Discrepancy (orange), Not arrived (violet) or Other, always with a free text field. A discrepancy can carry an optional pallet difference such as -2. Only arrived inbounds can be labeled, and the inbound list shows the badges right-aligned.
-- Not arrived inbounds leave the floor plan and no longer count. For a discrepancy the floor shows the pallets that were actually delivered. An inbound dated today counts as arrived from 7:00.
-- Problem outbounds and inbounds move to the Issues Center with one click, where photos and details can be added. Names in these cases always follow the current customer or supplier name.
-- New arrangement of the 3D warehouse view: customers stay together in a block, pallets fill each block without gaps, and similar colors never stand next to each other.
-- Stored inbounds are kept in a history for 365 days, with CSV export.
-- Bug fixes.
-
-### 1.3.1
-
-- Minor bug fixes
-
-### 1.3.0
-
-- New customer colors. The first ten customers on the floor get ten clearly different hues (blue, orange, magenta, gold, violet, red, sky blue, lime, jade and brown), with only one pink among them. Lighter and darker shades are only used when more customers are on the floor, and they never stand next to each other.
-
-### 1.2.2
-
-- Marking a customer as picked up now takes effect immediately. The row slides out of the outbound list and its pallets leave the floor plan right away while saving continues in the background. If saving fails, the row comes back and a notice says it was not marked as picked up.
-- All orders of a customer are now saved in a single request instead of one after another, so the pickup reaches the server noticeably faster.
-
-### 1.2.1
-
-- An invalid Colli value such as 4-5 PAL can no longer be saved, even when a correct value was entered first and changed afterwards. Confirming the pallet count when ticking Picked now sets Colli to that exact number, and the server rejects any Colli change that is not a whole number with PAL or BOX.
-- Every row you change in the outbound overview, including ticking a checkbox, must be complete before you can leave Maintenance.
-
 ### 1.2.0
 
-- The outbound overview in Maintenance now checks every new or changed row before you leave it: Colli must be a fixed number with PAL or BOX (for example 12 PAL or 1 BOX), Forwarder must be filled in, and either Delivered by or Pickup date must be set. While you are filling in rows nothing interrupts you. Only when you save, close Maintenance or switch tabs does a short notice list what is still missing, and the affected fields are marked until they are fixed.
-
-### 1.1.12
-
-- The 3D floor plan tries many more arrangements before it accepts a free slot inside a block.
-
-### 1.1.11
-
-- In the 3D floor plan a customer's pallets always stand directly next to each other. A pallet no longer ends up on its own between other customers.
-
-### 1.1.10
-
-- The 3D floor plan no longer places customers with similar colors next to each other.
-- A customer that needs more than one block no longer leaves single stray pallets elsewhere and continues in the block next to it instead of across the hall.
-
-### 1.1.9
-
-- The 3D floor plan no longer leaves empty slots inside a block. Smaller shipments move up to fill a gap, and a customer's pallets still stay together.
-
-### 1.1.8
-
-- An arrived delivery that no longer fits completely on the floor is now shown translucent and pulsing on the free slots instead of being hidden, so a full hall is visible at a glance. Picked orders keep their place.
-
-### 1.1.7
-
-- Pallets of the same customer now stay together in the 3D floor plan instead of being split across an aisle.
-
-### 1.1.6
-
-- Minor bug fixes.
+- New: inbounds can be labeled as a problem, just like outbounds (right click on the status, long press on touch devices). Choose Discrepancy (orange), Not arrived (violet) or Other, always with a free text field. A discrepancy can carry an optional pallet difference such as -2. Only arrived inbounds can be labeled. Not arrived inbounds leave the floor plan, and for a discrepancy the floor shows the pallets that were actually delivered.
+- Problem outbounds and inbounds move to the Issues Center with one click, where photos and details can be added. Admins label outbounds and inbounds, Warehouse Operators inbounds only, and all other roles can see the problem but not change it.
+- New arrangement of the 3D warehouse view: a customer's pallets always stand together, blocks fill without gaps, similar colors never stand next to each other, and the first ten customers get ten clearly different colors. Arrived deliveries that no longer fit show translucent and pulsing, and picked orders always keep their place.
+- The outbound overview in Maintenance checks required fields before you leave it: Colli as a whole number with PAL or BOX, Forwarder, and Delivered by or Pickup date. A row left incomplete for 15 minutes is cleaned up automatically, and a discarded new row can be brought back with Undo.
+- Marking a customer as picked up takes effect immediately. An inbound dated today counts as arrived from 7:00, and stored inbounds are kept in a history for 365 days. Tasks and Issues Center cases always show the current customer name.
+- Bug fixes.
 
 ### 1.1.5
 
