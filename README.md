@@ -483,6 +483,8 @@ On the phone, each scan of a lot number finds its line on the delivery note. Qua
 
 Filing an inspection asks which outbound rows it belongs to, with matching rows preselected. A complete inspection ticks **Printed**, **Picked** and **Control**, an incomplete one only **Printed** and **Picked**. The order card then links to the final inspection, and an ⓘ next to the customer opens the shipment details from the delivery notes: packages, weights, destination and customer address.
 
+Every inspection can be exported as a ZIP: **Export** next to **Log** on the PC, **Export inspections** in the phone settings. It holds an overview of all inspections and one CSV per inspection with the delivery note data, every line with lot, expected and counted quantity, and every booking with time and barcode. The ZIP is built in the browser, nothing extra is stored on the server.
+
 ---
 
 ### Issues Center
