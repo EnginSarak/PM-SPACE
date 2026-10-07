@@ -8,13 +8,13 @@
 
 # PROMEDIA SPACE
 
-**Version 1.2.1**
+**Version 1.2.2**
 
 *An internal web tool for monitoring warehouse utilization, staging capacity, inbound and outbound logistics<br/>and a integrated Control Center for final inspections*
 
 *Built by [Engin Sarak](https://github.com/EnginSarak)*
 
-![Version](https://img.shields.io/badge/version-1.2.1-blue)
+![Version](https://img.shields.io/badge/version-1.2.2-blue)
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.110-009688?logo=fastapi&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?logo=mongodb&logoColor=white)
@@ -633,6 +633,12 @@ PROMEDIA SPACE uses a token-based access model. There are no user accounts, pass
 ---
 
 ## Changelog
+
+### 1.2.2
+
+- Delivered by can be cleared in the outbound table as long as a Pickup date is set. The Pickup date stays.
+- The shipment info (ⓘ) shows numbers in German format, for example 1.000,00 kg. Clicking a weight copies only the number without kg.
+- In the outbound table on the dashboard, a click on a row highlights the whole row in yellow. A second click removes the highlight.
 
 ### 1.2.1
 
