@@ -8,13 +8,13 @@
 
 # PROMEDIA SPACE
 
-**Version 1.2.5**
+**Version 1.3.0**
 
 *An internal web tool for monitoring warehouse utilization, staging capacity, inbound and outbound logistics<br/>and a integrated Control Center for final inspections*
 
 *Built by [Engin Sarak](https://github.com/EnginSarak)*
 
-![Version](https://img.shields.io/badge/version-1.2.5-blue)
+![Version](https://img.shields.io/badge/version-1.3.0-blue)
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.110-009688?logo=fastapi&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?logo=mongodb&logoColor=white)
@@ -166,6 +166,7 @@ On a computer the Floor Plan opens as a 3D model of the staging area. Every box 
 | See-through, pulsing pallet | Reserved: an order still to be picked or a delivery expected tomorrow |
 | White INBOUND sign | Arrived delivery waiting to be stored |
 | Grey pad | Free slot |
+| Truck next to the hall | Arrived delivery that does not fit yet. It unloads as soon as enough space is free |
 
 Picked orders and arrived deliveries keep their slots until they are picked up or stored, always with all of their pallets. Pending picks and expected deliveries fill the free slots and are the first to go when space runs out.
 
@@ -302,7 +303,10 @@ Saving an order creates some tasks automatically:
 | Destination outside the EU | Asks whether an export declaration is needed. Above 1,000 € customs value or 1,000 kg gross weight it creates an EX1 checklist with six steps |
 | Saudi Arabia | Asks about air freight with pumps on board and creates a UN 3481 / SAG-06 labeling task |
 | Brazil | ISPM 15: IPPC marking on every wooden pallet |
+| Nestlé Deutschland | Books the transport with TST Logistics. EXW in Forwarder becomes TST Logistics |
 | Certain customers | Customer-specific reminders, such as booking a delivery slot |
+
+New open tasks are listed on top.
 
 A linked order shows the yellow triangle until its task is done.
 
@@ -475,7 +479,7 @@ The Control Center works with two devices on the same token, no pairing needed. 
   <img src="public/screenshots/control-phone.webp" alt="Control Center on the phone: start page, inspection and count sheet" width="100%"/>
 </p>
 
-On the phone, each scan of a lot number finds its line on the delivery note. Quantities are counted, not scanned: pick a unit (pallet, layer, carton or single) and type the amount, with arithmetic such as `12x8x3-1`. **Cashier mode** books one unit per scan. Pack sizes are learned per article and shared across devices. Every booking gives a tone and a flash at the screen edge.
+On the phone, each scan of a lot number finds its line on the delivery note. Quantities are counted, not scanned: pick a unit (pallet, layer, carton or single) and type the amount, with arithmetic such as `12x8x3-1`. **Cashier mode** books one unit per scan. Pack sizes are learned per article and shared across devices. Assigned barcodes have their own list in the settings, like the article catalog. Every booking gives a tone and a flash at the screen edge.
 
 <p align="center">
   <img src="public/screenshots/control-summary.webp" alt="Inspection summary on the phone" width="30%"/>
@@ -635,6 +639,14 @@ PROMEDIA SPACE uses a token-based access model. There are no user accounts, pass
 ---
 
 ## Changelog
+
+### 1.3.0
+
+- Inbounds that do not fit on the floor wait as trucks next to the hall in the 3D view.
+- Nestlé Deutschland orders get a TST Logistics task, and EXW in Forwarder becomes TST Logistics.
+- New open tasks are listed on top of the task list.
+- Assigned barcodes in the Control Center settings open on their own screen, like the catalog.
+- The 3D view fits inside the floor plan card on small phones.
 
 ### 1.2.5
 
