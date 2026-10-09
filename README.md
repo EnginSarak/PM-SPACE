@@ -170,6 +170,12 @@ On a computer the Floor Plan opens as a 3D model of the staging area. Every box 
 
 Picked orders and arrived deliveries keep their slots until they are picked up or stored, always with all of their pallets. Pending picks and expected deliveries fill the free slots and are the first to go when space runs out.
 
+An arrived delivery that does not fit yet waits as a truck next to the hall, the oldest one next to the wall. Hovering shows the supplier and the pallet count, and the truck disappears once all of its pallets fit.
+
+<p align="center">
+  <img src="public/screenshots/floor-3d-trucks.webp" alt="Inbound trucks waiting next to the hall" width="100%"/>
+</p>
+
 <p align="center">
   <img src="public/screenshots/floor-3d-rotated.webp" alt="Rotated 3D view" width="48%"/>
   <img src="public/screenshots/floor-3d-zoom.webp" alt="Zoomed 3D view" width="48%"/>
@@ -480,6 +486,10 @@ The Control Center works with two devices on the same token, no pairing needed. 
 </p>
 
 On the phone, each scan of a lot number finds its line on the delivery note. Quantities are counted, not scanned: pick a unit (pallet, layer, carton or single) and type the amount, with arithmetic such as `12x8x3-1`. **Cashier mode** books one unit per scan. Pack sizes are learned per article and shared across devices. Assigned barcodes have their own list in the settings, like the article catalog. Every booking gives a tone and a flash at the screen edge.
+
+<p align="center">
+  <img src="public/screenshots/control-barcodes.webp" alt="Assigned barcodes in the Control Center settings" width="60%"/>
+</p>
 
 <p align="center">
   <img src="public/screenshots/control-summary.webp" alt="Inspection summary on the phone" width="30%"/>
