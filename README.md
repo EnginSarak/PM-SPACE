@@ -10,7 +10,7 @@
 
 **Version 1.3.0**
 
-*An internal web tool for monitoring warehouse utilization, staging capacity, inbound and outbound logistics<br/>and a integrated Control Center for final inspections*
+*Internal web tool for warehouse capacity, inbound and outbound logistics, and final inspections*
 
 *Built by [Engin Sarak](https://github.com/EnginSarak)*
 
@@ -166,15 +166,9 @@ On a computer the Floor Plan opens as a 3D model of the staging area. Every box 
 | See-through, pulsing pallet | Reserved: an order still to be picked or a delivery expected tomorrow |
 | White INBOUND sign | Arrived delivery waiting to be stored |
 | Grey pad | Free slot |
-| Truck next to the hall | Arrived delivery that does not fit yet. It unloads as soon as enough space is free |
+| Truck next to the hall | Arrived delivery that does not fit yet, see [Waiting trucks](#inbound-and-bin-usage) |
 
 Picked orders and arrived deliveries keep their slots until they are picked up or stored, always with all of their pallets. Pending picks and expected deliveries fill the free slots and are the first to go when space runs out.
-
-An arrived delivery that does not fit yet waits as a truck next to the hall, the oldest one next to the wall. Hovering shows the supplier and the pallet count, and the truck disappears once all of its pallets fit.
-
-<p align="center">
-  <img src="public/screenshots/floor-3d-trucks.webp" alt="Inbound trucks waiting next to the hall" width="100%"/>
-</p>
 
 <p align="center">
   <img src="public/screenshots/floor-3d-rotated.webp" alt="Rotated 3D view" width="48%"/>
@@ -334,6 +328,12 @@ The clock icon in the full Inbound list opens the **History**: every delivery st
 
 <p align="center">
   <img src="public/screenshots/inbound-history.webp" alt="History of stored deliveries" width="100%"/>
+</p>
+
+**Waiting trucks.** An arrived delivery that does not fit on the floor yet does not take any slots. In 3D it waits as a truck to the left of the hall, the oldest one next to the wall, with INBOUND and the pallet count on the trailer. Hovering over the truck shows the supplier, the date and the note that it unloads as soon as enough space is free. Once all of its pallets fit, the truck disappears and the pallets stand on the floor. In 2D the delivery shows see-through on the free slots instead.
+
+<p align="center">
+  <img src="public/screenshots/floor-3d-trucks.webp" alt="Inbound trucks waiting next to the hall" width="100%"/>
 </p>
 
 **Inbound problems.** An arrived delivery can be flagged like an order: right-click (long-press) its status badge, choose **PROBLEM** and pick the type. **Discrepancy** takes an optional pallet difference such as −2, and the floor then shows only the pallets that are really there. **Not arrived** takes the delivery off the floor. **Other** keeps it as it is and needs a note. Maintainers and Warehouse Operators flag deliveries; everyone else sees the badge and the details in the delivery card. A flagged delivery offers **Edit problem**, **Move to Issues Center** and **Clear problem**.
