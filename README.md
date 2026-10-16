@@ -8,13 +8,13 @@
 
 # PROMEDIA SPACE
 
-**Version 1.3.1**
+**Version 1.3.2**
 
 *Internal web tool for warehouse capacity, inbound and outbound logistics, and final inspections*
 
 *Built by [Engin Sarak](https://github.com/EnginSarak)*
 
-![Version](https://img.shields.io/badge/version-1.3.1-blue)
+![Version](https://img.shields.io/badge/version-1.3.2-blue)
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.110-009688?logo=fastapi&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?logo=mongodb&logoColor=white)
@@ -649,6 +649,21 @@ PROMEDIA SPACE uses a token-based access model. There are no user accounts, pass
 ---
 
 ## Changelog
+
+### 1.3.2
+
+- The arrows above the capacity bar always move together with the bar.
+- The Picked Up history shows how many days the pickup differed from the confirmed pickup date, for orders picked up from now on.
+- Ticking Ordered asks whether the linked tasks are done while one is still open.
+- The warning triangle opens the task list and highlights all open tasks of that order.
+- Tasks of the same order stand together in the task list.
+- A task moves to Completed once every check is ticked.
+- New automatic tasks: Axium lot changes for Tamer and import customs for Switzerland, including Avosano.
+- Automatic tasks always name the forwarder of the order.
+- Sending the invoice to CE-Customs and requesting the EX1 is one check.
+- Help in the footer opens the user guide.
+- The iPhone install hint points at the share button.
+- A partly controlled groupage opens the whole groupage.
 
 ### 1.3.1
 
