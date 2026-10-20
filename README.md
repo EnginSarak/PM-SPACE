@@ -8,13 +8,13 @@
 
 # PROMEDIA SPACE
 
-**Version 1.3.3**
+**Version 1.3.4**
 
 *Internal web tool for warehouse capacity, inbound and outbound logistics, and final inspections*
 
 *Built by [Engin Sarak](https://github.com/EnginSarak)*
 
-![Version](https://img.shields.io/badge/version-1.3.3-blue)
+![Version](https://img.shields.io/badge/version-1.3.4-blue)
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.110-009688?logo=fastapi&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?logo=mongodb&logoColor=white)
@@ -649,6 +649,10 @@ PROMEDIA SPACE uses a token-based access model. There are no user accounts, pass
 ---
 
 ## Changelog
+
+### 1.3.4
+
+- The Forwarder is now picked from a fixed list.
 
 ### 1.3.3
 
