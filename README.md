@@ -603,6 +603,7 @@ handling the key itself.
 | `M` | Maintenance panel |
 | `C` | Control Center |
 | `I` | Issues Center |
+| `Space` | Task List |
 | `F5` | Fullscreen, monitor mode only |
 | `Esc` | Close the panel that is open |
 
@@ -632,6 +633,7 @@ handling the key itself.
 | Key | Action |
 | --- | --- |
 | `←` `→` | Previous or next image |
+| `Esc` | Back to the dashboard |
 
 ---
 
