@@ -303,7 +303,7 @@ Saving an order creates some tasks automatically:
 | Destination outside the EU | Asks whether an export declaration is needed. Above 1,000 € customs value or 1,000 kg gross weight it creates an EX1 checklist with six steps |
 | Saudi Arabia | Asks about air freight with pumps on board and creates a UN 3481 / SAG-06 labeling task |
 | Brazil | ISPM 15: IPPC marking on every wooden pallet |
-| Nestlé Deutschland | Books the transport with TST Logistics. EXW in Forwarder becomes TST Logistics |
+| Certain German customers | Books the transport with their logistics provider. EXW in Forwarder becomes that provider |
 | Certain customers | Customer-specific reminders, such as booking a delivery slot |
 
 New open tasks are listed on top.
@@ -671,9 +671,9 @@ PROMEDIA SPACE uses a token-based access model. There are no user accounts, pass
 - The warning triangle opens the task list and highlights all open tasks of that order.
 - Tasks of the same order stand together in the task list.
 - A task moves to Completed once every check is ticked.
-- New automatic tasks: Axium lot changes for Tamer and import customs for Switzerland, including Avosano.
+- New automatic tasks: lot changes for certain customers and import customs for Switzerland.
 - Automatic tasks always name the forwarder of the order.
-- Sending the invoice to CE-Customs and requesting the EX1 is one check.
+- Sending the invoice to the customs agent and requesting the EX1 is one check.
 - Help in the footer opens the user guide.
 - The iPhone install hint points at the share button.
 - A partly controlled groupage opens the whole groupage.
@@ -686,7 +686,7 @@ PROMEDIA SPACE uses a token-based access model. There are no user accounts, pass
 ### 1.3.0
 
 - Inbounds that do not fit on the floor wait as trucks next to the hall in the 3D view.
-- Nestlé Deutschland orders get a TST Logistics task, and EXW in Forwarder becomes TST Logistics.
+- Orders of certain German customers get a transport booking task, and EXW in Forwarder becomes their logistics provider.
 - New open tasks are listed on top of the task list.
 - Assigned barcodes in the Control Center settings open on their own screen, like the catalog.
 - The 3D view fits inside the floor plan card on small phones.
