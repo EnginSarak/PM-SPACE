@@ -300,7 +300,7 @@ Saving an order creates some tasks automatically:
 
 | Trigger | Task |
 |---|---|
-| Destination outside the EU | Asks whether an export declaration is needed. Above 1,000 € customs value or 1,000 kg gross weight it creates an EX1 checklist with six steps |
+| Destination outside the EU | Asks whether an export declaration is needed. Above 1,000 € customs value or 1,000 kg gross weight it creates an EX1 checklist with five steps |
 | Saudi Arabia | Asks about air freight with pumps on board and creates a UN 3481 / SAG-06 labeling task |
 | Brazil | ISPM 15: IPPC marking on every wooden pallet |
 | Certain German customers | Books the transport with their logistics provider. EXW in Forwarder becomes that provider |
