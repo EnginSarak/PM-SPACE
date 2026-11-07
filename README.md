@@ -8,13 +8,13 @@
 
 # PROMEDIA SPACE
 
-**Version 1.3.4**
+**Version 2.0.0**
 
 *Internal web tool for warehouse capacity, inbound and outbound logistics, and final inspections*
 
 *Built by [Engin Sarak](https://github.com/EnginSarak)*
 
-![Version](https://img.shields.io/badge/version-1.3.4-blue)
+![Version](https://img.shields.io/badge/version-2.0.0-blue)
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.110-009688?logo=fastapi&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?logo=mongodb&logoColor=white)
@@ -651,6 +651,15 @@ PROMEDIA SPACE uses a token-based access model. There are no user accounts, pass
 ---
 
 ## Changelog
+
+### 2.0.0
+
+- Maintainers get Warehouse for adjusting picks: upload Bin Contents, Warehouse Entries and the picks from Business Central and follow the suggestion for every pick line.
+- All Maintainers share one Warehouse round, like the Control Center. Uploads, answers and finished picks reach everyone within seconds.
+- The floor plan has a Full view for Maintainers: the whole hall in 3D with the pallets on the staging slots and the stock in the racks.
+- For Maintainers, the shipment info also shows the order, its tasks and prepared e-mails to copy or open in Outlook.
+- Maintainers get reminders for container, AWB and tracking numbers, the stock check on the phone and the PM COPILOT download.
+- Help explains all of it for Maintainers.
 
 ### 1.3.4
 
